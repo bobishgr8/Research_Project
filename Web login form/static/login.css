@@ -1,0 +1,67 @@
+form {
+    /* Just to center the form on the page */
+    margin: 10px auto;
+    width: 600px;
+    /* To see the outline of the form */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+form div + div {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+label {
+    /* To make sure that all labels have the same size and are properly aligned */
+    display: inline-block;
+    width: 100px;
+    height:1.5em;
+    text-align: right;
+}
+input, textarea {
+    font: 1em sans-serif;
+    /* To give the same size to all text fields */
+    width: 300px;
+    height:1.5em;
+    box-sizing: border-box;
+    /* To harmonize the look & feel of text field border */
+    border: 1px solid #999;
+}
+textarea {
+    /* To properly align multiline text fields with their labels */
+    vertical-align: top;
+    /* To give enough room to type some text */
+    height: 5em;
+}
+#container {
+	margin: 0px auto;
+	width: 500px;
+	height: 375px;
+	border: 10px #333 solid;
+}
+#videoElement {
+	width: 500px;
+	height: 375px;
+	background-color: #666;
+}
+
+.booth-capture-button{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: cornflowerblue;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.booth-capture-button:hover{
+    opacity: 0.2;
+}
+
+#canvas{
+    width:500px;
+    height:375px;
+    background-color: grey;
+    border:solid darkgray;
+}

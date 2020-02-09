@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="../static/register_form.css">
+</head>
+<body>
+    <form action="/add" method="post" enctype = "multipart/form-data" id="my_form">
+        <div>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="description">Brief discription of yourself</label>
+            <textarea id="description" name="description"></textarea>
+        </div>
+        <div>
+            <label for="image">Your Photo</label>
+            <div id="container">
+                    <video autoplay="true" id="videoElement"></video>
+                
+                <a href="#" id="capture" class="booth-capture-button"> Take Photo</a>
+                <canvas id="canvas"></canvas>
+                
+                
+                <a href="#" class="booth-capture-button" id="btn-download" download="user.png"> Register</a>
+                
+                
+                
+                <!-- the script had to be inline for the JS to work with python Flaks's render templates since the external JS file will not be rendered-->
+                <script>
+                var video = document.querySelector("#videoElement");
+                const canvas = document.getElementById("canvas");
+                const context = canvas.getContext("2d");
+                const captureButton = document.getElementById('capture');
+
+                if (navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+                    .then(function (stream) {
+                    video.srcObject = stream;
+                    })
+                    .catch(function (error) {
+                    console.log("Something went wrong!");
+                    });
+                }
+                captureButton.addEventListener('click', () => {
+                // Draw the video frame to the canvas.
+                context.drawImage(video, 0, 0, canvas.width, canvas.height);
+                });
+                const constraints = {
+                video: true,
+                };
+                // Attach the video stream to the video element and autoplay.
+                navigator.mediaDevices.getUserMedia(constraints)
+                .then((stream) => {
+                    player.srcObject = stream;
+                });
+                document.getElementById("capture").addEventListener("click",function(){  
+                })
+                function stop(e) {
+                var stream = video.srcObject;
+                var tracks = stream.getTracks();
+                for (var i = 0; i < tracks.length; i++) {
+                    var track = tracks[i];
+                    track.stop();
+                }
+                video.srcObject = null;
+                }
+                var dataURL = canvas.toDataURL();
+                console.log(dataURL);
+                
+                function submit_form(){
+                    document.getElementById('my_form').submit(); return false;
+                }
+
+                var button = document.getElementById('btn-download');
+                button.addEventListener('click', function (e) {
+                    var dataURL = canvas.toDataURL('image/png');
+                    button.href = dataURL;
+                    setTimeout(function(){submit_form();}, 1000); 
+                    console.log("waiting for image upload");
+                });
+                </script>
+            
+        </div>
+        </div>
+
+        </div>
+    </form>
+</body>
+</html>
