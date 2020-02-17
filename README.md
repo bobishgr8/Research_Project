@@ -6,7 +6,7 @@ You can check out the "SSEF poster final.pdf" for a look at the overall project.
 
 ## Task 1
 
-For this task, I needed to model an image in a math opperable and computer understandable object. Therefore the bluk of the code here is to change the imgaes into matrixes. 
+For this task, I needed to model an image in a math opperable and computer understandable object. Therefore the bulk of the code here is to change the images into matrixes. 
 
 ## Task 2
 
