@@ -1,4 +1,4 @@
-# Research_Project
+# Research Project
 
 This is all the code that i used for a NJC E-StAR research project. The main aim of the project is to develop a facial recognition system that can be used as a web authenticator.
 
