@@ -1,6 +1,6 @@
 # Research_Project
 
-This is all the code that i used for a NJ E-StAR research project. The main aim of the project is to develop a facial recognition system that can be used as a web authenticator.
+This is all the code that i used for a NJC E-StAR research project. The main aim of the project is to develop a facial recognition system that can be used as a web authenticator.
 
 You can check out the "SSEF poster final.pdf" for a look at the overall project. 
 
