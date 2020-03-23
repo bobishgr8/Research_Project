@@ -10,7 +10,7 @@ For this task, I needed to model an image in a math operable and computer unders
 
 ## Task 2
 
-In this task, the main goal is to find if 2 matrixes are the same. So no biggie.
+In this task, the main goal is to find if 2 matrixes are the same.
 Was mainly just:
 > if matrix1 == matrix2 : 
 
